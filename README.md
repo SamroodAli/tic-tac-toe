@@ -21,7 +21,7 @@ Clone repository from github to your local drive by following these steps:
 - Go to the main page of the repository
 - Above the listed files, click the green Code button
 - You can clone the repository using:
-  - SSH: `git clone git@github.com:marijanbrvar/TicTacToe.git`.
+  - SSH: `git@github.com:SamroodAli/tic-tac-toe.git`.
 - Open Terminal
 - Change the current working directory to the location you want the cloned directory
 - Type one of the git clone commands listed above.
