@@ -38,7 +38,6 @@ end
 
 puts display_board(board)
 
-
 puts "This game between #{player1} & #{player2} it TIE"
 print 'Do you want to play again(y/n)? '
 again = gets.chomp
