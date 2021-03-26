@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-board = %w[1 2 3 4 5 6 7 8 9]
+board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def display_board(board)
   puts '+---+---+---+'
@@ -25,7 +25,8 @@ puts
 puts "#{player1} vs #{player2}"
 display_board(board)
 puts
-4.times do
+game_over = false
+until game_over
   puts "It is your turn #{player1}, position your Symbol on board"
   move = gets.chomp
   while move.empty?
@@ -42,6 +43,7 @@ puts
   end
   board[move.to_i - 1] = 'O'
   display_board(board)
+  game_over = true if board.none?(Integer)
 end
 
 puts display_board(board)
