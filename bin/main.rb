@@ -27,12 +27,19 @@ display_board(board)
 puts
 4.times do
   puts "It is your turn #{player1}, position your Symbol on board"
-  move = gets.chomp.to_i
-  board[move] = 'X'
-  display_board(board)
+  move = gets.chomp
+  while move.empty?
+    puts "Enter an available board number"
+    move = gets.chomp
+  end
+  board[move.to_i - 1] = 'X'
   puts "It is your turn #{player2}, position your Symbol on board"
-  move = gets.chomp.to_i
-  board[move] = 'O'
+  move = gets.chomp
+  while move.empty?
+    puts "Enter an available board number"
+    move = gets.chomp
+  end
+  board[move.to_i - 1] = 'O'
   display_board(board)
 end
 
