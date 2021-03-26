@@ -29,14 +29,15 @@ puts
   puts "It is your turn #{player1}, position your Symbol on board"
   move = gets.chomp
   while move.empty?
-    puts "Enter an available board number"
+    puts 'Enter an available board number'
     move = gets.chomp
   end
   board[move.to_i - 1] = 'X'
+  display_board(board)
   puts "It is your turn #{player2}, position your Symbol on board"
   move = gets.chomp
   while move.empty?
-    puts "Enter an available board number"
+    puts 'Enter an available board number'
     move = gets.chomp
   end
   board[move.to_i - 1] = 'O'
