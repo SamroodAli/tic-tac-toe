@@ -16,6 +16,15 @@ class Board
     @board = (1..9).to_a
   end
 
+  def tie?
+    @board.all? { |e| e.is_a?(String) }
+  end
+
+  def win?
+    WIN_SEQUENCE.any? do |combination|
+      combination.all? { |idx| @board[idx] == 'X' } || combination.all? { |idx| @board[idx] == 'O' }
+    end
+  end
 
   def update_board(current_player, position, player1, player2)
     @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
