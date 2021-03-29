@@ -17,6 +17,12 @@ In this project, we create a Tic Tac Toe game. The main goal is to put into prac
 
 * Players take turn to place their symbols on the board.
 
+* The grid is numbered from 1 to 9.
+
+![Game grid](game_grid.png)
+
+* You place the symbol by choosing the cell number.
+
 * The  First Player to get 3 of her symbols in a row (up, down, across, or diagonally) wins the game.
 
 * When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
@@ -51,11 +57,16 @@ Clone repository from github to your local drive by following these steps:
 
 ## Authors
 
+
+![Marijan's GitHub stats](https://github-readme-stats.vercel.app/api?username=marijanbrvar&count_private=true&theme=dark&show_icons=true)
+
 👤 MARIJAN BRVAR
 
 - GitHub: [@githubhandle](https://github.com/marijanbrvar)
 - Twitter: [@twitterhandle](https://twitter.com/marijanbrvar)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/marijanbrvar)
+
+![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
 
 👤 SAMROOD ALI
 
