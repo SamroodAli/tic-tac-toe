@@ -1,19 +1,18 @@
 class Board
   attr_accessor :board
 
-  WIN_SEQUENCE = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [2, 4, 6],
-    [0, 4, 8]
-  ]
-
   def initialize()
     @board = (1..9).to_a
+    @win_sequence = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [2, 4, 6],
+      [0, 4, 8]
+    ]
   end
 
   def tie?
@@ -21,7 +20,7 @@ class Board
   end
 
   def win?
-    WIN_SEQUENCE.any? do |combination|
+    @win_sequence.any? do |combination|
       combination.all? { |idx| @board[idx] == 'X' } || combination.all? { |idx| @board[idx] == 'O' }
     end
   end

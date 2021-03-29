@@ -2,6 +2,8 @@
 require_relative '../lib/players'
 require_relative '../lib/board'
 
+puts "Welcome to Tic Tac Toe"
+
 def display_board(board)
   puts '         +---+---+---+'
   puts "         | #{board[0]} | #{board[1]} | #{board[2]} |"
@@ -27,6 +29,7 @@ def players_name
   name2 = validated_name(name2)
   [name1, name2]
 end
+
 def validated_name(name)
   loop do
     break unless name.strip == ''
@@ -78,19 +81,15 @@ loop do
     if game_board.win?
       display_board(game_board.board)
       puts 'Celebrate!'
-      puts "#{current_player.name} is the winner!"
-      puts
+      puts "#{current_player.name} is the winner! \n"
       break
     elsif game_board.tie?
       display_board(game_board.board)
-      puts 'Tie game! — Game over'
-      puts
+      puts "Tie game! — Game over \n"
       break
     end
     display_board(game_board.board)
     current_player = player1.change_player(current_player, player2)
   end
   break if player_answer == 'q'
-
-
 end
