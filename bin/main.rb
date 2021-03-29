@@ -2,7 +2,7 @@
 require_relative '../lib/players'
 require_relative '../lib/board'
 
-puts "Welcome to Tic Tac Toe"
+puts 'Welcome to Tic Tac Toe'
 
 def display_board(board)
   puts '         +---+---+---+'
