@@ -14,6 +14,28 @@ def display_board(board)
   puts '         +---+---+---+'
 end
 
+def display_title
+  puts '
+   __                 __                     __
+  |  |_  __   ___    |  |_   __  __  ___    |  |_   ___    ___
+  |   _||  |/  __\   |   _|/  _ ` |/  ___\  |   _|/  _  \/ ( )_\
+  |  |_ |  |  (___   |  |_   (_|  |  (___   |  |_   (_)  | |____
+   \___||__|\____/    \___|\____,_|\_____/   \___|\_____/\_____/
+  '
+end
+
+def display_instruction
+  puts ''
+  puts 'We play TicTacToe on a 3x3 board.'
+  puts 'Players take turns placing their Token, O or X,'
+  puts 'on an open square in the grid.'
+  puts
+  puts 'The first player taking 3 consecutive positions in line,'
+  puts 'horizontally, verticaly or diagonally will be the winner.'
+  puts 'If all 9 squares are filled and neither player can position '
+  puts '3 tokens in line, the game will be tie.'
+end
+
 def player_answer
   puts ''
   puts ">> To continue, press any key, or 'q' to quit the game."
@@ -57,6 +79,8 @@ def validate_position(position, board)
 end
 
 loop do
+  display_title
+  display_instruction
   game_board = Board.new
   abort if player_answer == 'q'
   name1, name2 = players_name
@@ -80,8 +104,7 @@ loop do
 
     if game_board.win?
       display_board(game_board.board)
-      puts 'Celebrate!'
-      puts "#{current_player.name} is the winner! \n"
+      puts "'Celebrate!' #{current_player.name} is the winner! \n"
       break
     elsif game_board.tie?
       display_board(game_board.board)
