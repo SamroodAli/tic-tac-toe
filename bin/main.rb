@@ -61,6 +61,20 @@ loop do
 
     game_board.update_board(current_player, position, player1, player2)
 
+    if game_board.win?
+      display_board(game_board.board)
+      puts 'Celebrate!'
+      puts "#{current_player.name} is the winner!"
+      puts
+      break
+    elsif game_board.tie?
+      display_board(game_board.board)
+      puts 'Tie game! — Game over'
+      puts
+      break
+    end
+    display_board(game_board.board)
+    current_player = player1.change_player(current_player, player2)
   end
   break if player_answer == 'q'
 
