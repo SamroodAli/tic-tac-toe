@@ -7,18 +7,19 @@ In this project, we create a Tic Tac Toe game. The main goal is to put into prac
 
 ## TIC TAC TOE GAME INSTRUCTIONS
 
-1. Tic Tac Toe is board game played on a board with a 3 squared by 3 squared grid.
+* Tic Tac Toe is board game played on a board with a 3 squared by 3 squared grid.
 
-2. The players are assigned their own symbols to place on the board cells
+* The players are assigned their own symbols to place on the board cells
 
-* Player 1 has the "X" symbol
-* Player 2 has "O" symbol.
+* Player 1 will be assigned the `X` symbol.
 
-3. Players take turn to place their symbols on the board.
+* Player 2 will be assigned the `O` symbol.
 
-4. The  First Player to get 3 of her symbols in a row (up, down, across, or diagonally) wins the game.
+* Players take turn to place their symbols on the board.
 
-5. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+* The  First Player to get 3 of her symbols in a row (up, down, across, or diagonally) wins the game.
+
+* When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
 
 ## Built With
