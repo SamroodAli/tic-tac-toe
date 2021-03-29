@@ -31,7 +31,7 @@ def validated_name(name)
   loop do
     break unless name.strip == ''
 
-    print 'No Anonimoys player. Please enter the correct name: '
+    print 'No anonymous player. Please enter the correct name: '
     name = gets.chomp
   end
   name
@@ -40,6 +40,17 @@ end
 def display_players(player1, player2)
   puts "Welcome #{player1.name} your symbol is #{player1.symbol} "
   puts "Welcome #{player2.name} your symbol is #{player2.symbol} "
+end
+
+def validate_position(position, board)
+  loop do
+    break if (1..9).include?(position) && !board[position - 1].is_a?(String)
+
+    print 'Please enter valid number from 1 to 9: ' unless (1..9).include?(position)
+    print "It's already taken. Please choose another position: " if board[position - 1].is_a?(String)
+    position = gets.chomp.to_i
+  end
+  position
 end
 
 loop do
@@ -52,6 +63,9 @@ loop do
   player2 = Player.new(name2, 'O')
   display_players(player1, player2)
   3.times { puts }
+
+  display_board(game_board.board)
+  current_player = player1
 
   loop do
     print "It is your turn #{current_player.name}, set your Symbol (#{current_player.symbol}) on board "
