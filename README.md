@@ -82,7 +82,7 @@ Clone repository from github to your local drive by following these steps:
 - GitHub: [@SamroodAli](https://github.com/SamroodAli)
 - LinkedIn: [Samrood Ali](https://www.linkedin.com/in/samrood-ali/)
 
-> ![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
+![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
 
 
 ## 🤝 Contributing
