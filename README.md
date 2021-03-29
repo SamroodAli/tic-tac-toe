@@ -4,6 +4,10 @@
 
 In this project, we create a Tic Tac Toe game. The main goal is to put into practice the main concepts of Object Oriented Programming. Particularly, classes and access to their attributes.
 
+<p align="center">
+  <img width="600" src="tictactoe.svg">
+</p>
+
 
 ## TIC TAC TOE GAME INSTRUCTIONS
 
@@ -19,7 +23,7 @@ In this project, we create a Tic Tac Toe game. The main goal is to put into prac
 
 * The grid is numbered from 1 to 9.
 
-![Game grid](game_grid.png)
+*   ![Game grid](game_grid.png)
 
 * You place the symbol by choosing the cell number.
 
@@ -57,21 +61,21 @@ Clone repository from github to your local drive by following these steps:
 
 ## Authors
 
-
-![Marijan's GitHub stats](https://github-readme-stats.vercel.app/api?username=marijanbrvar&count_private=true&theme=dark&show_icons=true)
-
 👤 MARIJAN BRVAR
 
 - GitHub: [@githubhandle](https://github.com/marijanbrvar)
 - Twitter: [@twitterhandle](https://twitter.com/marijanbrvar)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/marijanbrvar)
 
-![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
+![Marijan's GitHub stats](https://github-readme-stats.vercel.app/api?username=marijanbrvar&count_private=true&theme=dark&show_icons=true)
+
 
 👤 SAMROOD ALI
 
 - GitHub: [@SamroodAli](https://github.com/SamroodAli)
 - LinkedIn: [Samrood Ali](https://www.linkedin.com/in/samrood-ali/)
+
+> ![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
 
 
 ## 🤝 Contributing
