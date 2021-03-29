@@ -53,4 +53,16 @@ loop do
   display_players(player1, player2)
   3.times { puts }
 
+  loop do
+    print "It is your turn #{current_player.name}, set your Symbol (#{current_player.symbol}) on board "
+
+    position = gets.chomp.to_i
+    position = validate_position(position, game_board.board)
+
+    game_board.update_board(current_player, position, player1, player2)
+
+  end
+  break if player_answer == 'q'
+
+
 end
