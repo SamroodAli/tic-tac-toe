@@ -16,7 +16,7 @@ class Board
   end
 
   def tie?
-    # @board.all? { |e| e.is_a?(String) }
+    @board.all? { |e| e.is_a?(String) }
   end
 
   def win?

@@ -5,10 +5,10 @@ describe 'Board' do
   describe '#initialize' do
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
       array = (1..9).to_a
-      expect(subject.board).to eq(array)
+      expect(:board.board).to eq(array)
     end
     it 'should initialize instance varibale @win_sequence to an 2d array of 8 combinations' do
-      expect(subject.win_sequence.length).to eq(8)
+      expect(:board.win_sequence.length).to eq(8)
     end
 
     it '@winning combinations should be the tic tac toe game winning indexes' do
@@ -22,12 +22,14 @@ describe 'Board' do
         [2, 4, 6],
         [0, 4, 8]
       ]
-      expect(subject.win_sequence).to eq(win_sequence)
+      expect(:board.win_sequence).to eq(win_sequence)
     end
   end
 
 
   describe "#tie?" do
-    
+    it "should return true if the board instance has no more slots" do
+      :board.board = %w[X X O O X X X O O]
+    end
   end
 end
