@@ -14,4 +14,13 @@ describe 'Player' do
     end
   end
 
+  describe "#initialize" do
+    it "should set parameter name as instance variable @name" do
+      expect(player1.name).to eq("Samrood")
+    end
+
+    it "should set paramter symbol as instance variable @symbol" do
+      expect(player1.symbol).to eq("X")
+    end
+  end
 end
