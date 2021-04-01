@@ -6,8 +6,8 @@ describe 'Board' do
   let(:player2) { double('player', symbol: 'O') }
 
   describe '#initialize' do
-    it "should not accept any arguments" do
-    expect {game_board(9)}.to raise_error ArgumentError
+    it 'should not accept any arguments' do
+      expect { game_board(9) }.to raise_error ArgumentError
     end
 
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
