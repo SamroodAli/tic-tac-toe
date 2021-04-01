@@ -34,7 +34,11 @@ describe 'Board' do
       game_board.instance_variable_set(:@board,tie)
       expect(game_board.tie?).to be true
     end
-    
+    it "should return false if there are any slots left(integers left)" do
+      current_board = ["X",2,"O","X",5,6,7,8,9]
+      game_board.instance_variable_set(:@board,current_board)
+      expect(game_board.tie?).to be false
+    end
   end
 
 end
