@@ -2,8 +2,8 @@ require 'board'
 
 describe 'Board' do
   subject(:game_board) { Board.new }
-  let(:player1){double("player",symbol=>"X")}
-  let(:player2){double("player",symbol=>"O")}
+  let(:player1){double("player",:symbol => "X")}
+  let(:player2){double("player",:symbol => "O")}
 
   describe '#initialize' do
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
