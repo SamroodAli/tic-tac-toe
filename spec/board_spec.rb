@@ -3,7 +3,7 @@ require 'board'
 describe 'Board' do
   subject(:board) { Board.new }
   describe '#initialize' do
-    it 'should initialize instance variable @board to array with with length 9' do
+    it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
       array = (1..9).to_a
       expect(subject.board).to eq(array)
     end
