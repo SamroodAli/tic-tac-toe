@@ -38,10 +38,16 @@ describe 'Player' do
           expect{player1.change_player(player1,player2)}.to_not raise_error ArgumentError
         end
 
-        it "should return opponent if self is current player" do
+        it "should return opponent player" do
           current_player  = player1
           opponent = player2
           expect(player1.change_player(current_player,opponent)).to eq(opponent)
+        end
+        
+        it "should not return the same player" do
+          current_player  = player1
+          opponent = player2
+          expect(player1.change_player(current_player,opponent)).not_to eq(current_player)
         end
 
       end
