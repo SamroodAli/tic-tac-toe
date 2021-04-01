@@ -1,5 +1,5 @@
 class Board
-  attr_accessor :board
+  attr_accessor :board, :win_sequence
 
   def initialize()
     @board = (1..9).to_a
