@@ -25,4 +25,9 @@ describe 'Board' do
       expect(subject.win_sequence).to eq(win_sequence)
     end
   end
+
+
+  describe "#tie?" do
+    
+  end
 end
