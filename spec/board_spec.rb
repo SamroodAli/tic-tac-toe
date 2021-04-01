@@ -66,8 +66,10 @@ describe 'Board' do
     end
   end
 
-  descibe "#update_board" do
-    # it "should take in "
+  describe "#update_board" do
+    it "should take in current player as Player, position as integer, two Player instances" do
+      expect{game_board.update_board}.to raise_error ArgumentError
+    end
   end
 
 end
