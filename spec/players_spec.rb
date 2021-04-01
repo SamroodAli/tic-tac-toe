@@ -2,7 +2,8 @@ require 'players'
 
 describe 'Player' do
   subject(:player1) { Player.new("Samrood","X") }
-  let(player2){Player.new("Marijan","O")}
+  let(:player2){Player.new("Marijan","O")}
+
   context "when no arguments are given" do
     it "should raise argument error" do
       expect{Player.new}.to raise_error ArgumentError
@@ -34,8 +35,15 @@ describe 'Player' do
 
       context "when arguments are given" do
         it "should not raise argument error" do
-          expect{player1.change_player}.to_not raise_error ArgumentError
+          expect{player1.change_player(player1,player2)}.to_not raise_error ArgumentError
         end
+
+        it "should return opponent if self is current player" do
+          current_player  = player1
+          opponent = player2
+          expect(player1.change_player(current_player,opponent)).to eq(opponent)
+        end
+
       end
     end
 end
