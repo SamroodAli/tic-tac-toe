@@ -27,4 +27,14 @@ describe 'Board' do
       expect(game_board.win_sequence).to eq(win_sequence)
     end
   end
+
+  describe "#tie?" do
+    it "should return true if all the slots are filled with strings" do
+      tie = %w[X O X O X O X O O]
+      game_board.instance_variable_set(:@board,tie)
+      expect(game_board.tie?).to be true
+    end
+    
+  end
+
 end
