@@ -2,8 +2,8 @@ require 'board'
 
 describe 'Board' do
   subject(:game_board) { Board.new }
-  let(:player1){double("player")}
-  let(:player2){double("player")}
+  let(:player1){double("player",symbol=>"X")}
+  let(:player2){double("player",symbol=>"O")}
 
   describe '#initialize' do
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
@@ -69,6 +69,10 @@ describe 'Board' do
   describe "#update_board" do
     it "should take in current player as Player, position as integer, two Player instances" do
       expect{game_board.update_board}.to raise_error ArgumentError
+    end
+
+    it "should set a marker on position for current player" do
+      current_player = player1
     end
   end
 
