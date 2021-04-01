@@ -2,6 +2,7 @@ require 'board'
 
 describe 'Board' do
   subject(:game_board) { Board.new }
+  let(:player1){double("player")}
 
   describe '#initialize' do
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
@@ -62,7 +63,10 @@ describe 'Board' do
       game_board.instance_variable_set(:@board,no_win_sequence)
       expect(game_board.win?).to be false
     end
+  end
 
+  descibe "#update_board" do
+    # it "should take in "
   end
 
 end
