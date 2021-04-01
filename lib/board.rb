@@ -16,7 +16,7 @@ class Board
   end
 
   def tie?
-    @board.all? { |e| e.is_a?(String) }
+    # @board.all? { |e| e.is_a?(String) }
   end
 
   def win?
@@ -26,6 +26,6 @@ class Board
   end
 
   def update_board(current_player, position, player1, player2)
-    @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
+    # @board[position - 1] = current_player == player1 ? player1.symbol : player2.symbol
   end
 end
