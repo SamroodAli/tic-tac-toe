@@ -73,16 +73,17 @@ describe 'Board' do
     end
 
     context 'when arguments are given' do
-      it 'should update board with marker on index (position-1) given for current player after invoking update_board' do
+      before(:each) do
         current_player = player1
         game_board.update_board(current_player, 1, player1, player2)
+      end
+
+      it 'should update board with marker on index (position-1) given for current player after invoking update_board' do
         expect(game_board.board[0]).to eq('X')
       end
 
-      it 'should not update position, but position - 1' do
-        current_player = player1
-        game_board.update_board(current_player, 1, player1, player2)
-        expect(game_board.board[0]).to eq('X')
+      it 'should not update board at given position but at index of (position - 1)' do
+        expect(game_board.board[1]).to eq(2)
       end
     end
   end
