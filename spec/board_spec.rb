@@ -29,6 +29,11 @@ describe 'Board' do
   end
 
   describe "#tie?" do
+
+    it "should return false before game" do
+      expect(game_board.tie?).to be false
+    end
+
     it "should return true if all the slots are filled with strings" do
       tie = %w[X O X O X O X O O]
       game_board.instance_variable_set(:@board,tie)
@@ -39,6 +44,25 @@ describe 'Board' do
       game_board.instance_variable_set(:@board,current_board)
       expect(game_board.tie?).to be false
     end
+  end
+
+  describe "#win?" do
+    it "should return false before game" do
+      expect(game_board.win?).to be false
+    end
+
+    it "should return true if there is a winning combination" do
+      winning_combination = [1,"X","O","O","X","O",7,"X","O"]
+       game_board.instance_variable_set(:@board,winning_combination)
+       expect(game_board.win?).to be true
+    end
+
+    it "should return false if there are no winning conditions" do
+      no_win_sequence = %w[X O X O 5 O X 8 O]
+      game_board.instance_variable_set(:@board,no_win_sequence)
+      expect(game_board.win?).to be false
+    end
+
   end
 
 end
