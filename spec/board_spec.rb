@@ -1,5 +1,4 @@
-require_relative '../lib/board.rb'
-
+require_relative '../lib/board'
 
 describe 'Board' do
   subject(:game_board) { Board.new }
