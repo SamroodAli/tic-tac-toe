@@ -2,6 +2,7 @@ require 'players'
 
 describe 'Player' do
   subject(:player1) { Player.new("Samrood","X") }
+  let(player2){Player.new("Marijan","O")}
   context "when no arguments are given" do
     it "should raise argument error" do
       expect{Player.new}.to raise_error ArgumentError
@@ -23,4 +24,18 @@ describe 'Player' do
       expect(player1.symbol).to eq("X")
     end
   end
+
+    describe "#change_player" do
+      context "when no arguments are given" do
+        it "should raise argument error" do
+          expect{player1.change_player}.to raise_error ArgumentError
+        end
+      end
+
+      context "when arguments are given" do
+        it "should not raise argument error" do
+          expect{player1.change_player}.to_not raise_error ArgumentError
+        end
+      end
+    end
 end
