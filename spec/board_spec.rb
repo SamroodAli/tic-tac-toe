@@ -1,4 +1,5 @@
-require 'board'
+require_relative '../lib/board.rb'
+
 
 describe 'Board' do
   subject(:game_board) { Board.new }
@@ -7,7 +8,7 @@ describe 'Board' do
 
   describe '#initialize' do
     it 'should not accept any arguments' do
-      expect { game_board(9) }.to raise_error ArgumentError
+      expect { game_board(9) }.to raise_error
     end
 
     it 'should initialize instance variable @board to array with with numbers from 1 to 9' do
@@ -72,7 +73,7 @@ describe 'Board' do
   describe '#update_board' do
     context 'when arguments are not given' do
       it 'should take in current player as Player, position as integer, two Player instances' do
-        expect { game_board.update_board }.to raise_error ArgumentError
+        expect { game_board.update_board }.to raise_error
       end
     end
 
